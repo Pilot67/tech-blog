@@ -1,0 +1,17 @@
+[
+  {
+    "user_id": "1",
+    "title": "New Watch",
+    "content": "Check out the new Aplle watch. It wont be available until next year"
+  },
+  {
+    "user_id": "1",
+    "title": "Latest iOS",
+    "content": "Anyone having any issues with the latest iOS-15"
+  },
+  {
+    "user_id": "3",
+    "title": "My new 34\" screen",
+    "content": "Great new screen from samsung but the USB ports are not working"
+  }
+]

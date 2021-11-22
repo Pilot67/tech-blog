@@ -1,0 +1,17 @@
+[
+  {
+    "user_id": "2",
+    "post_id": "1",
+    "comment_text": "Love the look of the new watch"
+  },
+  {
+    "user_id": "3",
+    "post_id": "1",
+    "comment_text": "The new watch is a bit too small for me"
+  },
+  {
+    "user_id": "2",
+    "post_id": "3",
+    "comment_text": "Isn't it covered under warranty?"
+  }
+]
