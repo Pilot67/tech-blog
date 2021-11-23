@@ -1,0 +1,15 @@
+<section>
+{{#if posts.length}}    
+  {{#each posts as |post|}}
+  <div class="card mt-4">
+    <h3 class="card-header custom-card-header">{{post.title}}</h3>
+    <div class="card-body">
+      <p>{{post.content}}</p>
+    </div>
+    <div>
+      <h5 class="card-header">Posted by {{post.user.name}} on {{formatDate post.date_created}}</h5>
+    </div>
+  </div>
+  {{/each}}
+{{/if}}
+</section>
