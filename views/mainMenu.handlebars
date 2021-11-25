@@ -4,7 +4,7 @@
     {{#each posts as |post|}}
     <div class="card mt-4" data-idx="{{post.id}}">
       <h3 class="card-header custom-card-header">
-        <a href = "/blog/{{post.id}}">{{post.title}}</a>
+        <a href = "api/posts/{{post.id}}">{{post.title}}</a>
       </h3>
       <div class="card-body">
         <p>{{post.content}}</p>

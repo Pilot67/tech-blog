@@ -18,7 +18,7 @@ User.hasMany(Comments, {
 });
 
 Comments.belongsTo(User, {
-    foreignKey: 'id',
+    foreignKey: 'user_id',
 });
 
 Posts.hasMany(Comments, {

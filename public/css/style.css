@@ -48,9 +48,21 @@
 .custom-card {
   border-color: var(--teal);
   color: var(--brown);
+  justify-content:space-between
 }
 
 .custom-card-header {
   background-color: var(--teal);
   color: var(--lightteal);
+  display: flex;
+  justify-content: space-between;
+}
+.custom-left-padding {
+  padding-left: 50px;
+}
+.custom-h3 {
+  display: inline-block;
+}
+.custom-text-end {
+  text-align: right;
 }

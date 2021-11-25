@@ -1,0 +1,21 @@
+    <div class="card mt-4 custom-card">
+      <div class="card-header custom-card-header">
+        <h3>{{posts.title}}</h3>
+        <h3>Posted by {{posts.user.name}} on {{formatDate posts.date_created}}</h3>
+      </div>
+      <div class="card-body">
+        <p>{{posts.content}}</p>
+      </div>
+      <div>
+        <h5 class="card-header">Posted by {{posts.user.name}} on {{formatDate posts.date_created}}</h5>
+      </div>
+
+
+      {{#each posts.comments as |comment|}}
+        <div class="card-body border mt-2" >
+          <p>{{comment.comment_text}}</p>
+          <p class="custom-left-padding"> Posted by {{comment.user.name}}   -    {{formatDate comment.date_created}}</p>
+        </div>
+      {{/each}}
+    </div>
+</section>
