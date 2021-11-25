@@ -4,10 +4,25 @@ const { Posts, User, Comments } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const postsData = await Posts.findAll({
-      include: [{ model: User, attributes: ["name"]}, {model:Comments}],
+      include: [        {
+        model: User,
+        attributes: ["name"],
+        required: false,
+      },
+      {
+        model: Comments,
+        attributes: ["id", "date_created", "comment_text"],
+        include: [
+          {
+            model: User,
+            required: false,
+            attributes: ["name"],
+          },
+        ],
+      },
+],
     });
     const posts = postsData.map((post) => post.get({ plain: true }));
-    console.log({posts})
     res.render("mainMenu", {
       posts,
       logged_in: req.session.logged_in,
@@ -18,24 +33,22 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect('/dashboard');
-  //   return;
-  // }
-
-  res.render('login');
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
 });
 
-router.get('/signup', (req, res) => {
+router.get("/signup", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect('/dashboard');
-  //   return;
-  // }
-
-  res.render('signup');
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+  res.render("signup");
 });
 
 module.exports = router;
