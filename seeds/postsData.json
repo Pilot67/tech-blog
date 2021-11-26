@@ -10,8 +10,18 @@
     "content": "Anyone having any issues with the latest iOS-15"
   },
   {
-    "user_id": "3",
+    "user_id": "2",
     "title": "My new 34\" screen",
     "content": "Great new screen from samsung but the USB ports are not working"
+  },
+  {
+    "user_id": "3",
+    "title": "Macbook Pro slowing down",
+    "content": "My new MAcbook Pro is starting to slow down"
+  },
+  {
+    "user_id": "1",
+    "title": "Unboxing my new iPhone",
+    "content": "Great packaging !!"
   }
 ]

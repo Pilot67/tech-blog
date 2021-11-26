@@ -1,9 +1,22 @@
-{{#each dashData as |dash|}}
-   <div class="card mt-4 custom-card">
-      <div class="card-header custom-card-header">
-        <h3>{{dash.title}}</h3>
-        <button id="delPost" class="btn btn-danger">Delete</button>
-      </div>
-    </div>
+<section>
+  <div>
+  <p>Click on the title to edit or Delete button to delete</p>
+  </div>
 
-{{/each}}
+  {{#each dashData as |dash|}}
+    <div id="dashCard" class="card mt-4 custom-card">
+        <div class="card-header custom-card-header">
+          <h3>
+            <a href="/edit/{{dash.id}}">{{dash.title}}</a>
+          </h3>
+          <button id="delPost" class="btn btn-danger" data-id={{dash.id}}>Delete</button>
+        </div>
+      </div>
+  {{/each}}
+
+  {{!-- Render the "add new" button here --}}
+  <div class = "d-grid gap-2 mt-5">
+      <a id="newPost" href = "/newpost" class="text-center btn btn-primary btn-block" >Add New Post</a>
+  </div>
+  <script src="/js/posts.js"></script>
+</section>

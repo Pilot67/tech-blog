@@ -8,7 +8,7 @@ User.hasMany(Posts, {
 });
 
 Posts.belongsTo(User, {
-    foreignKey: 'id',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE',
 });
 
