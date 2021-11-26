@@ -3,14 +3,14 @@
         <h3>{{posts.title}}</h3>
         <h3>Posted by {{posts.user.name}} on {{formatDate posts.date_created}}</h3>
       </div>
-      <div class="card-body my-2">
+      <div class="card-body py-1">
         <p>{{posts.content}}</p>
       </div>
     </div>
 
       {{#each posts.comments as |comment|}}
-        <div class="card mt-2">
-            <div class="card-body">
+        <div class="card mt-1 py-1">
+            <div class="card-body py-0">
                 <p>{{comment.comment_text}}</p>
                 <p class="custom-left-padding"> Posted by {{comment.user.name}}   -    {{formatDate comment.date_created}}</p>
             </div>
@@ -18,17 +18,16 @@
       {{/each}}
 
       {{!-- Add a new comment here --}}
-    <div class="card mt-4 custom-card">
+    <div class="card mt-3 custom-card">
       <div class="card-header custom-card-header">
         <h3>Add a comment</h3>
       </div>
       <form class="add-comment" data-post_id="{{posts.id}}">
-        <div class="form-group mt-2 p-2">
+        <div class="form-group mt-1 p-2">
           <label for="addComment">Comment:</label>
-          
           <textarea type="input" class="form-control" id="addComment"  rows="3" placeholder="Enter comment"></textarea>
+          <button id="btnAddComment" type="submit" class="btn btn-primary mt-2">Submit</button>
         </div>
-        <button id="btnAddComment" type="submit" class="btn btn-primary mt-4">Submit</button>
       </form>
     </div>
     <script src="/js/posts.js"></script>
