@@ -1,3 +1,4 @@
+// Add new comment 
 $("#btnAddComment").click(async (event) => {
   event.preventDefault();
   const comment_text = $("#addComment").val().trim();
@@ -11,7 +12,6 @@ $("#btnAddComment").click(async (event) => {
     });
     console.log(response);
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
       document.location.replace("/"); //Home Screen
     } else {
       alert(response.statusText);
@@ -42,9 +42,10 @@ $(".card").on("click", "#btnUpdate", async (event) => {
   const post_id = $(".add-comment").data("post_id");
   const title = $("#editTitle").val().trim();
   const comment_text = $("#editContent").val().trim();
-
-  console.log(post_id, title, comment_text)
-
+  if (!title) {
+    alert('Empty title is not allowed')
+    return
+  };
   const response = await fetch("/api/dash/", {
     method: "PUT",
     body: JSON.stringify({ post_id, title, comment_text }),
@@ -61,7 +62,10 @@ $(".card").on("click", "#btnNew", async (event) => {
   event.preventDefault();
   const title = $("#editTitle").val().trim();
   const comment_text = $("#editContent").val().trim();
-
+  if (!title) {
+    alert('Empty title is not allowed')
+    return
+  };
   const response = await fetch("/api/dash/", {
     method: "POST",
     body: JSON.stringify({title, comment_text }),

@@ -62,15 +62,12 @@ router.put("/", authorize, async (req, res) => {
 });
 
 router.post("/", authorize, async (req, res) => {
-  console.log(req.body);
   try {
-    const updatePost = await Posts.create(
-      {
-        user_id: req.session.user_id,
-        title: req.body.title,
-        content: req.body.comment_text,
-      },
-    );
+    const updatePost = await Posts.create({
+      user_id: req.session.user_id,
+      title: req.body.title,
+      content: req.body.comment_text,
+    });
     if (!updatePost) {
       res.status(404).json({ message: "No post created" });
       return;
