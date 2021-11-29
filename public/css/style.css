@@ -23,7 +23,7 @@
 
 a {
   text-decoration: none;
-  color: var(--chalk)
+  color: var(--chalk);
 }
 
 .custom-navbar {
@@ -35,9 +35,11 @@ a {
   color: var(--chalk);
 }
 
-a:hover,
+a:hover {
+  color: var(--darkGrey);
+}
 .custom-navbar a:hover {
-  color: var(--textBlack);
+  color: var(--lightGrey);
 }
 #lnkSignupLogin {
   color: var(--blue);
