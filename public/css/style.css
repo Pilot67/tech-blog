@@ -10,6 +10,10 @@
   --teal: #71a8a7;
   --lightteal: #d5f5f5;
   --light: #fffaf7;
+  --pink: #f8f0f0;
+  --blue: #2f3c7e;
+  --darkGrey: #3d3d3d;
+  --lightGrey: #8d8d8d;
 }
 
 ::selection {
@@ -17,8 +21,13 @@
   background-color: var(--light);
 }
 
+a {
+  text-decoration: none;
+  color: var(--chalk)
+}
+
 .custom-navbar {
-  background-color: var(--darkCharcoal);
+  background-color: var(--darkGrey);
 }
 
 .custom-navbar a {
@@ -26,34 +35,24 @@
   color: var(--chalk);
 }
 
+a:hover,
 .custom-navbar a:hover {
-  color: var(--light);
+  color: var(--textBlack);
 }
-
-.custom-jumbotron {
-  background-color: var(--lightteal);
-  color: var(--teal);
+#lnkSignupLogin {
+  color: var(--blue);
+  text-decoration: underline;
 }
-
-.custom-btn {
-  background-color: var(--brown);
-  color: var(--light);
-}
-
-.custom-btn:hover {
-  background-color: var(--tan);
-  color: var(--brown);
-}
-
 .custom-card {
-  border-color: var(--teal);
-  color: var(--brown);
-  justify-content:space-between
+  color: var(--textBlack);
+  background-color: var(--chalk);
+  border-color: var(--lightGrey);
+  justify-content: space-between;
 }
 
 .custom-card-header {
-  background-color: var(--teal);
-  color: var(--lightteal);
+  background-color: var(--lightGrey);
+  color: var(--chalk);
   display: flex;
   justify-content: space-between;
 }
@@ -62,4 +61,8 @@
 }
 .custom-text-end {
   text-align: right;
+}
+.custom-card-body {
+  color: var(--blue);
+  background-color: var(--pink);
 }
