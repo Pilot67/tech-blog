@@ -100,7 +100,8 @@ No test files yet, check again soon<br>
 <p align="right">(<a href="#top">back to top</a>)</p>
   
 ## Links
-Published Link: https://cryptic-brushlands-81287.herokuapp.com/<br>
+Published Link: https://cryptic-brushlands-81287.herokuapp.com/  
+Github Repository: https://github.com/Pilot67/tech-blog  
 <p align="right">(<a href="#top">back to top</a>)</p>
   
 ## Questions
