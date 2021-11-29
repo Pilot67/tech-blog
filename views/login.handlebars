@@ -1,4 +1,5 @@
 <section>
+    {{!-- Render Login Screen --}}
     <div class="card mt-4">
     <h3 class="card-header custom-card-header">Login</h3>
     <div class="card-body">
@@ -6,13 +7,12 @@
       <form>
         <div class="form-group mt-2">
           <label for="loginEmail">Email address</label>
-          {{!-- Added value default for development --}}
-          <input value="developer@simmons1.net" type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group mt-3">
           <label for="loginPassword">Password</label>
-          <input value="Password1234" type="password" class="form-control" id="loginPassword" placeholder="Password">
+          <input type="password" class="form-control" id="loginPassword" placeholder="Password">
         </div>
         <button id="loginSubmit" type="submit" class="btn btn-primary mt-4">Submit</button>
       </form>
